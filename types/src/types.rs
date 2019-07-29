@@ -330,6 +330,11 @@ impl FieldTable {
     pub fn contains_key(&self, k: &str) -> bool {
         self.0.contains_key(k)
     }
+
+    /// Get the entry
+    pub fn get(&self, k: &str) -> Option<&AMQPValue> {
+        self.0.get(k)
+    }
 }
 
 impl<'a> IntoIterator for &'a FieldTable {
